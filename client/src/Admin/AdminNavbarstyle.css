@@ -1,0 +1,32 @@
+.adminnav{
+    background-color: #052C7C;
+}
+.adminnavbaritem{
+    color:white;
+    background-color: #052C7C;
+    border-radius: 50px;
+    margin: 5px;
+}
+#adminnotifycardimg{
+    width: 150px;
+    height: 100px;
+}
+#adminnotifycardimg{
+    width: 150px;
+    height: 150px;
+}
+#adminlogoutbtn{
+    background-color: #052C7C;
+    border:none;
+    font-size: 15px;
+    color:white;
+    border-radius: 5px;
+}
+#adminlogoutbtn:hover{
+    background-color: whitesmoke;
+    color:#052d7cab
+}
+.adminnavtitle{
+    color:white;
+    text-decoration: none;
+}

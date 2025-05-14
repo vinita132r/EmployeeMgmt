@@ -1,0 +1,43 @@
+/* Navbar Container */
+.navbarlandingpage {
+    background-color:#052C7C;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for better aesthetics */
+  }
+  
+  /* Button Group in Navbar */
+  .navrightlandingpage {
+    display: flex;
+    gap: 15px;
+  }
+  
+  /* Button Styling */
+  .custombtnlandingpage {
+    /* background-color: black; */
+    background-color: #052C7C;
+    border-color: white;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+    text-decoration: none;
+  }
+  .mainnav{
+    text-decoration: none;
+    background-color: #052C7C;
+    color:white;
+  }
+  
+  /* Button Hover Effects */
+  .custombtnlandingpage:hover {
+    background-color: whitesmoke;
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+  }
+  
+ 
+ 

@@ -1,0 +1,28 @@
+#adminnotifytext{
+    padding: 15px;
+}
+/* #adminnotifycard{
+    background-color:rgba(0, 0, 0, 0.581);
+    color: white;
+} */
+ #adminnotifybgimg{
+    position: absolute;
+    opacity: 0.5;
+    width:100%;
+    height: 93%;
+    z-index: -1;
+ }
+ #adminnotifyheading{
+    color:white;
+    margin-top: 20px;
+
+ }
+ #adminnotifyeachcard{
+    margin-top: 20px;
+    position: relative;
+    border-radius: 10px;
+    border-color:#8ba7df07;
+    font-size: 18px;
+    color:#052C7C;
+    height: 115px;
+ }

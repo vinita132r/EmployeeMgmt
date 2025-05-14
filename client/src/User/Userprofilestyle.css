@@ -1,0 +1,90 @@
+.userprofile{
+    margin-top: 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+    color:white;
+    background-color: #1d4eafd2;
+    border-radius: 25px;
+    width: 550px;
+    position: relative;
+    
+    
+
+
+}
+.profiledetails{
+    font-size: 18px;
+
+    
+}
+.navbaritem{
+    color:white;
+    background-color: black;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.userprofilelabel{
+    padding-top: 7px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+#userprofileimg{
+    margin-left:60px;
+    margin-right: 60px;
+    width: 175px;
+    height: 145px;
+}
+#userlistlikebtn,#userlistviewbtn{
+    background-color: #052C7C;
+    color:white;
+    border-color:white;
+    border-radius: 10px;
+}
+#userlistlikebtn:visited{
+    color:white;
+}
+.userlistlabel{
+    color:whitesmoke;
+    padding: 10px;
+    text-align: center;
+    border: solid 1px;
+    border-color: #052d7c86;
+
+}
+#userlistbgimg{
+    position: absolute;
+    opacity: 0.5;
+    width:100%;
+    height: 93%;
+    z-index: -1;
+}
+.userlist{
+    margin-top: 10px;
+    position: relative;
+
+
+}
+#userlistheading{
+    /* color: whitesmoke; */
+    color:white;
+    padding-top: 10px;
+}
+.userlisttabletr{
+    /* border: solid 1px #052C7C; */
+    background-color: #052d7ca8
+}
+/* .userlisttabletr:nth-child(even){
+    border: solid 1px #052C7C;
+    background-color: whitesmoke;
+} */
+
+#userloguserlistimg{
+    width: 87px;
+    height:75px;
+}
+#userviewonebgimg{
+    position: absolute;
+    width: 100%;
+    height: 650px;
+}
