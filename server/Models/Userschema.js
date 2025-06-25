@@ -27,7 +27,8 @@ var UserSchema=mongoose.Schema({
     },
     image: {
         type:Object,
-        required:true
+        required:true,
+        default:null
     },
     isActive: {
         type: Boolean,
