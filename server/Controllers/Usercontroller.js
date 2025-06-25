@@ -90,20 +90,23 @@ const deleteuser = async(req,res)=>{
 
 }
 
-const updateuser= async(req,res)=>{
-    const id=req.params.pid;
-    await User.findByIdAndUpdate({"_id":id},{"empname":empname},{"age":age},{"empid":empid},{"typeofemp":typeofemp},{"email":email},{"password":password},{new:true})
-    .then((result)=>{
-        res.status(200).json({
-            data:"successfully updated"
-        })
-    })
-    .catch((err)=>{
-        res.status(500).json({
-            message:err
-        })
-    })
-}
+const updateuser = async (req, res) => {
+    const id = req.params.pid;
+    const { empname, age, empid, typeofemp, email, password } = req.body;
+    const image = req.file;
+
+    try {
+        await User.findByIdAndUpdate(
+            { _id: id },
+            { empname, age, empid, typeofemp, email, password, image },
+            { new: true }
+        );
+        res.status(200).json({ data: "successfully updated" });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+};
+
 
 const loginvalidateuser=async(req,res)=>{
     console.log(req.body);
