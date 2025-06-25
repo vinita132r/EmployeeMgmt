@@ -1,0 +1,29 @@
+.usernav{
+    background-color:#052C7C;
+    /* color: white; */
+
+}
+.navbaritem{
+    background-color: #052C7C;
+    /* color: white; */
+}
+.usernavbartitle{
+    color:white;
+    text-decoration: none;
+}
+.usernavbartitle:hover{
+    color:#052d7cab;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 5px;
+}
+.usernavbarlogout{
+    color:white;
+    background-color: #052C7C;
+    border:none;
+}
+.usernavbarlogout:hover{
+    color:#052d7cab;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
