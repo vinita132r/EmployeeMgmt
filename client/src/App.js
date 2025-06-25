@@ -15,6 +15,8 @@ import Adminuserlist from './Admin/Adminuserlist';
 import Adminviewuserprofile from './Admin/Adminviewuserprofile';
 import Adminlogin from './Admin/Adminlogin';
 import Userviewoneprof from './User/Userviewoneprof';
+import Userdailyupdate from './User/Userdailyupdate';
+import UserNotification from './User/UserNofication';
 
 // import Navbar from './Navbar';
 function App() {
@@ -28,15 +30,17 @@ function App() {
         <Route path="/register" element={<Registration/>}/>
         <Route path="/userhome" element={<Userhome/>}/>
         <Route path="/userlist" element={<Userlist/>}/>
+        <Route path="/userdailyupdate/:id" element={<Userdailyupdate/>}/>
         <Route path="/userprofile/:id" element={<Userprofile/>}/>
         <Route path="/userviewone/:id" element={<Userviewoneprof/>}/>
+        <Route path="/usernotify" element={<UserNotification/>}/>
 
 
         <Route path="/adminlogin" element={<Adminlogin/>}/>
         <Route path="/adminhome" element={<Admindashboard/>}/>
         <Route path="/adminnotify" element={<AdminNotification/>}/>
         <Route path="/adminuserlist" element={<Adminuserlist/>}/>
-        <Route path="/adminviewuser" element={<Adminviewuserprofile/>}/>
+        <Route path="/adminviewuser/:id" element={<Adminviewuserprofile/>}/>
 
 
       </Routes>

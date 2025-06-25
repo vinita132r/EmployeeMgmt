@@ -1,43 +1,58 @@
-/* Navbar Container */
 .navbarlandingpage {
-    background-color:#052C7C;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for better aesthetics */
-  }
-  
-  /* Button Group in Navbar */
-  .navrightlandingpage {
-    display: flex;
-    gap: 15px;
-  }
-  
-  /* Button Styling */
-  .custombtnlandingpage {
-    /* background-color: black; */
-    background-color: #052C7C;
-    border-color: white;
-    border-radius: 5px;
-    padding: 6px 12px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
-    text-decoration: none;
-  }
-  .mainnav{
-    text-decoration: none;
-    background-color: #052C7C;
-    color:white;
-  }
-  
-  /* Button Hover Effects */
-  .custombtnlandingpage:hover {
-    background-color: whitesmoke;
-    transform: scale(1.05); /* Slightly enlarges button on hover */
-  }
-  
- 
- 
+  background-color: #052C7C;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 60px;
+}
+
+.navrightlandingpage {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Style buttons */
+.custombtnlandingpage {
+  background-color: #052C7C;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Remove button outline on focus */
+.custombtnlandingpage:focus {
+  outline: none;
+}
+
+/* Style the Link inside button */
+.mainnav {
+  color: white;
+  text-decoration: none;
+  pointer-events: auto;
+  display: inline;
+}
+
+/* Hover effect for button */
+.custombtnlandingpage:hover {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+/* Change Link text color on hover of button */
+.custombtnlandingpage:hover .mainnav {
+  color: #052C7C;
+}
