@@ -26,6 +26,12 @@ function Usernavbar() {
                           <Nav.Link eventKey="link-1" className='navbaritem'><Link to={'/userprofile/:id'} className='usernavbartitle'>Profile</Link></Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
+                          <Nav.Link eventKey="link-1" className='navbaritem'><Link to={'/userdailyupdate/:id'} className='usernavbartitle'>Daily Updates</Link></Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                          <Nav.Link eventKey="link-1" className='navbaritem'><Link to={'/usernotify'} className='usernavbartitle'>Notifications</Link></Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
                           <Nav.Link eventKey="link-1" className='navbaritem'><button onClick={onLogout} className='usernavbarlogout' >Logout</button></Nav.Link>
                       </Nav.Item>
                   </Nav>

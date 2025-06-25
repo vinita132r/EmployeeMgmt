@@ -33,16 +33,37 @@ function Userprofile() {
         
     }
 
-    // const onChgdata=(e)=>{
-    //   // axios.post("http://127.0.0.1:8080/updateuser/"+id)
-    //         setDetails({...details,[e.target.name]:e.target.value})
-      
+    const onChgdata=(e)=>{
+      // axios.post("http://127.0.0.1:8080/updateuser/"+id)
+      //console.log(e.target.value)
+      //setDetails({...details,[e.target.name]:e.target.value})
+      if(e.target.type==="file"){
+        setDetails({...details,file:e.target.files[0]});
+      }else{
+        setDetails({...details,[e.target.name]:e.target.value});
+      }
 
-    // }
-    // const updateuserfn=(id)=>{
-    //   axios.post("http://127.0.0.1:8080/updateuser"+id,details)
-        
-    // }
+    }
+    const updateuserfn=(id)=>{
+      const form=new FormData()
+
+      form.append("empname",details.empname)
+      form.append("age",details.age)
+      form.append("empid",details.empid)
+      form.append("typeofemp",details.typeofemp)
+      form.append("email",details.email)
+      form.append("password",details.password)
+      form.append("file",details.file)
+
+      axios.post(`http://127.0.0.1:8080/updateuser/${id}`, form)
+      .then((result) => {
+        alert("Updated successfully");
+        // setDetails(result)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    }
 
     useEffect(()=>{
         viewuserfn();
@@ -60,38 +81,44 @@ function Userprofile() {
                       data.map((item,index)=>()
                     } */}
                     
-                    <img id='userprofileimg' src={`http://127.0.0.1:8080/${details?.image?.filename}`}/><br/>
+                    <img id='userprofileimg' src={`http://127.0.0.1:8080/${details?.image?.filename}`}/><br/><br/>
+                    <table id='userprofiletable'>
+                        <tr><th className='userprofilelabel'>Name:</th>
+                        <td><input type="text" placeholder={details?.empname} name='empname' onChange={onChgdata}/></td>
+                        </tr>
+                        
+                        <tr><th className='userprofilelabel'>Employement Type:</th>
+                        <td><input type="text" placeholder={details.typeofemp} name='typeofemp' onChange={onChgdata}/></td>
+                        </tr>
+                        
+                        <tr><th className='userprofilelabel'>Age:</th>
+                        <td><input type="text" placeholder={details.age} name='age' onChange={onChgdata}/></td>
+                        </tr>
 
-                        <label className='userprofilelabel'>Name : {details?.empname}</label><br/><br/>
                         
-                        <label className='userprofilelabel'>Type of Employement : {details.typeofemp}</label><br/><br/>
-                        
-                        <label className='userprofilelabel'>Age : {details.age}</label><br/><br/>
-                        
-                        <label className='userprofilelabel'>Employee ID : {details.empid}</label><br/><br/>
+                        <tr><th className='userprofilelabel'>Employee ID:</th>
+                        <td><input type="text" placeholder={details.empid} name='empid' onChange={onChgdata}/></td>
+                        </tr>
+
                      
-                        <label className='userprofilelabel'>Email : {details.email}</label><br/><br/>
-                        
-                        <label className='userprofilelabel'>Password : {details.password}</label><br/><br/>
+                        <tr><th className='userprofilelabel'>Email:</th>
+                        <td><input type="text" placeholder={details.email} name='email' onChange={onChgdata}/></td>
+                        </tr>
 
-                        {/* <button>Go Back</button> */}
-
-                        {/* <h3>Update Data</h3><br/>
-
-                        Name :<input type="text" placeholder={details.empname} onChange={onChgdata}/><br/><br/>
                         
-                        Type of Employement :<input type="text" placeholder={details.typeofemp} onChange={onChgdata}/><br/><br/>
-                        
-                        Age :<input type="text" placeholder={details.age} onChange={onChgdata}/><br/><br/>
-                        
-                        Employee ID :<input type="text" placeholder={details.empid} onChange={onChgdata}/><br/><br/>
-                     
-                        Email :<input type="text" placeholder={details.email} onChange={onChgdata}/><br/><br/>
-                        
-                        Password :<input type="text" placeholder={details.password} onChange={onChgdata}/><br/><br/>
+                        <tr><th className='userprofilelabel'>Password:</th>
+                        <td><input type="text" placeholder={details.password} name='password' onChange={onChgdata}/></td>
+                        </tr>
 
-                        <button onClick={()=>{updateuserfn(details._id)}}>Update</button>&nbsp; */}
+                        <tr><th className='userprofilelabel'>Add new photo:</th>
+                        <td><input type="file" onChange={onChgdata} name='file'/></td>
+                        </tr>
 
+                        </table>
+                        <br/>
+                        <button onClick={()=>{updateuserfn(details._id)}} id='userprofileupdatebtn'>Update</button>&nbsp;
+
+                        <br/><br/><br/>
                 
                 </div>
             </center>

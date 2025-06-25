@@ -17,6 +17,7 @@ function Login() {
     }
 
     const nvar=useNavigate();
+
     const onclk = (e) => {
       e.preventDefault();
         console.log(log);
@@ -24,11 +25,15 @@ function Login() {
 
       .then((data)=>{
         console.log(data)
-        localStorage.setItem('userId',data.data.data._id)
-        alert(data.data.message)
-        nvar("/userhome")
+        if(data.data.data.isActive === true){
+          localStorage.setItem('userId',data.data.data._id)
+          alert(data.data.message)
+          nvar("/userhome")
 
-  
+        }
+        else{
+          alert("Your account has been deactivated by admin")
+        }
       })
       .catch((error)=>{
         console.log(error)

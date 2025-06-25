@@ -1,4 +1,4 @@
-.userprofile{
+.userprofile,.userdailyupdate{
     margin-top: 20px;
     margin-left: 500px;
     margin-right: 500px;
@@ -12,7 +12,7 @@
 
 
 }
-.profiledetails{
+.profiledetails,.dailyupdatedetails{
     font-size: 18px;
 
     
@@ -24,7 +24,7 @@
     border-radius: 15px;
 }
 
-.userprofilelabel{
+.userprofilelabel,.userdailyupdlabel{
     padding-top: 7px;
     margin-left: 60px;
     margin-right: 60px;
@@ -33,9 +33,10 @@
     margin-left:60px;
     margin-right: 60px;
     width: 175px;
-    height: 145px;
+    height: 165px;
+    border-radius: 30px;
 }
-#userlistlikebtn,#userlistviewbtn{
+#userlistlikebtn,#userlistviewbtn,#dailyupdatebtn,#userprofileupdatebtn{
     background-color: #052C7C;
     color:white;
     border-color:white;
@@ -86,5 +87,10 @@
 #userviewonebgimg{
     position: absolute;
     width: 100%;
-    height: 650px;
+    height: 730px;
+}
+#userprofiletable{
+    margin-left: 30px;
+    border-collapse: separate; /* Important */
+    border-spacing: 5px;
 }

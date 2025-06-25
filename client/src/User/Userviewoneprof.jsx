@@ -82,6 +82,9 @@ function Userviewoneprof() {
 
                         {/* <h3>Update Data</h3><br/>
 
+                        Add new photo : 
+                        <input type="file" onChange={onChgdata}/><br/><br/>
+
                         Name :<input type="text" placeholder={details.empname} onChange={onChgdata}/><br/><br/>
                         
                         Type of Employement :<input type="text" placeholder={details.typeofemp} onChange={onChgdata}/><br/><br/>
